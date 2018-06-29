@@ -562,7 +562,7 @@ class DataProcHiveOperator(BaseOperator):
         hook.submit(hook.project_id, job.build())
 
 
-class DataProcSparkSqlOperator(BaseOperator):
+class DataProcStemplate_fieldsparkSqlOperator(BaseOperator):
     """
     Start a Spark SQL query Job on a Cloud DataProc cluster.
     """
@@ -646,7 +646,7 @@ class DataProcSparkOperator(BaseOperator):
     Start a Spark Job on a Cloud DataProc cluster.
     """
 
-    template_fields = ['arguments', 'job_name', 'cluster_name']
+    template_fields = ['arguments', 'job_name', 'cluster_name', 'files']
     ui_color = '#0273d4'
 
     @apply_defaults
